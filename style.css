@@ -16,6 +16,7 @@ body{
   padding: 15px 200px;
   background: #404372;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 .nav,
 .nav .nav-links {
@@ -335,7 +336,7 @@ a {
     width: 460px;
   }
   .background{
-    height: 65vh;
+    height: 75vh;
   }
   .background img{
     width: 100%;
