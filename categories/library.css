@@ -1,0 +1,351 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+/* li, button{
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav{
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px, 10%;
+    color: #b5ccff;
+}
+
+.logo{
+    max-width: 40px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+    color: #ff9e5e;
+}
+
+.cta button{
+    text-emphasis-color: #edf0f1;
+    padding: 9px 25px;
+    background-color: rgba(0,181,226,1);
+    border-radius: 30px;
+    border: none;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-right: 10px;
+}
+
+.cta button:hover{
+    background-color: rgba(0, 181, 226, 0.8);
+} */
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 200px;
+    background: #404372;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  .nav,
+  .nav .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  .nav {
+    justify-content: space-between;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .nav .logo {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .nav .logo:hover{
+    color: #ff9e5e;
+    font-weight: 600;
+    filter: drop-shadow(0px 0px 5px #ff9e5e);
+    transition: all 1s ease-in-out 0s;
+   
+  }
+  .nav .nav-links {
+    column-gap: 20px;
+    list-style: none;
+  }
+  .nav .nav-links :hover{
+    color: #ff9e5e;
+    transition: all 0.4s ease;
+  }
+  .nav .nav-links a {
+    transition: all 0.2s linear;
+  }
+  .nav.openSearch .nav-links a {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .nav .search-icon {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .nav .search-box {
+    position: absolute;
+    right: 250px;
+    height: 45px;
+    max-width: 555px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s linear;
+  }
+  .nav.openSearch .search-box {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .search-box .search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    left: 15px;
+    color: #ff9e5e;
+    transform: translateY(-50%);
+  }
+  .search-box input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 0 15px 0 45px;
+  }
+  .nav .navOpenBtn,
+  .nav .navCloseBtn {
+    display: none;
+  }
+  /* responsive */
+  @media screen and (max-width: 1160px) {
+    .nav {
+      padding: 15px 100px;
+    }
+    .nav .search-box {
+      right: 150px;
+    }
+  }
+  @media screen and (max-width: 950px) {
+    .nav {
+      padding: 15px 50px;
+    }
+    .nav .search-box {
+      right: 100px;
+      max-width: 400px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .nav .navOpenBtn,
+    .nav .navCloseBtn {
+      display: block;
+    }
+    .nav {
+      padding: 15px 20px;
+    }
+    .nav .nav-links {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      height: 100%;
+      max-width: 280px;
+      width: 100%;
+      padding-top: 100px;
+      row-gap: 30px;
+      flex-direction: column;
+      background-color: #11101d;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s ease;
+      z-index: 100;
+    }
+    .nav.openNav .nav-links {
+      left: 0;
+    }
+    .nav .navOpenBtn {
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .nav .navCloseBtn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .nav .search-box {
+      top: calc(100% + 10px);
+      max-width: calc(100% - 20px);
+      right: 50%;
+      transform: translateX(50%);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+.categories-heading{
+    margin: 5px;
+    margin-top: 75px;
+
+}
+.categories{
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr 4fr;
+    width: 100%;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.cat button{
+    width: 250px;
+    padding: 5px;
+    margin:5px 20px;
+    border:none;
+    border-radius: 4px;
+    background-color: rgb(230, 230, 230);
+    transition: all 0.2s ease 0s;
+}
+.cat button:hover{
+    background-color: rgb(220, 220, 220);
+}
+
+/* .library button{
+    width: 250px;
+    padding: 5px;
+    border:none;
+    border-radius: 4px;
+    background-color: rgb;
+    transition: all 0.2s ease 0s;
+}
+.library button:hover{
+    background-color: rgb(220, 220, 220);
+} */
+#fav-C-h1{
+    margin: 5px;
+}
+
+.fav-channels{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    justify-content: space-around;
+    padding: 20px;
+}
+.fav-channels a{
+    width: 90%;
+    height: 100px;
+    margin: 20px 20px;
+    text-decoration: none;
+}
+
+.channels{
+    width: 100%;
+    height: 100px;
+    cursor: pointer;
+    vertical-align: middle;
+    padding-top: 40px;
+    /* background: #ff9e5e; */
+    border: none;
+    border-radius: 5px;
+    display: flex;
+}
+.channels h3{
+    width: 50%;
+    margin-right: 0;
+}
+.chnl-logo {
+    width: 50%;
+    margin-top: -18px;
+    /* color: #424372; */
+    /* mask: calc(40); */
+}
+.chnl-logo img{
+    padding: -20px;
+    height: 100px;
+    width: 100px;
+    border: none;
+    border-radius: 100%;
+}
+
+@media screen and (max-width:1160px) {
+    .cat button{
+        width: 200px;
+    }
+}
+@media screen and (max-width:950px) {
+    .cat button{
+        width: 170px;
+    }
+}
+@media screen and (max-width:768px) {
+    .categories{
+        grid-template-columns: 3fr 3fr 3fr;
+    }
+    .cat button{
+        width: 200px;
+        margin: 5px 10px;
+    }
+    .fav-channels{
+        grid-template-columns: 2fr 2fr;
+    }
+}
+@media screen and (max-width:648px) {
+    .cat button{
+        width: 150px;
+    }
+}
+@media screen and (max-width:460px) {
+    .cat button{
+        width: 125px;
+    }
+    .fav-channels a{
+        margin-top: 40px;
+        width: 175px;
+    }
+    .fav-channels button h3 {
+        margin-top: -25px;
+        margin-left: -45px;
+    }
+    .chnl-logo{
+        margin-top: 15px;
+        margin-left: 5px;
+    }
+}
