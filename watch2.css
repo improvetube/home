@@ -155,7 +155,10 @@ a{
   }
 }
 
-box h1{
+.box{
+    margin-top:35px; 
+}
+.box h1{
     align-items: center;
     display: flex;
     justify-content: center;
