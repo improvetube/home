@@ -16,23 +16,34 @@
     <title>Settings</title>
     <link id="icon" rel="icon" href="images/Logo/ImproveTube logo2 colorStyle1 (rounded).png">
     <link rel="stylesheet" href="settings.css">
+    <link rel="stylesheet" href="navbar.css">
+
+    <script src="scriptclone.js" defer></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
+
 </head>
 
 <body>
 
-    <header>
-        <img class="logo" src="images/ImproveTube logo2.png" alt="logo">
-        <nav>
-            <ul class="nav__links">
-                <li><a class="nav" href="index.html">Home</a></li>
-                <li><a class="nav" href="watch.html">Watch</a></li>
-                <li><a class="nav" href="settings.html">Settings</a></li>
-            </ul>
-        </nav>
-        <a class="cta" href="register.html"><button>Register</button></a>
-    </header>
+    <nav class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <a href="index.html" class="logo">ImproveTube</a>
+        <ul class="nav-links">
+          <i class="uil uil-times navCloseBtn"></i>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="watch.html">Watch</a></li>
+          <li><a href="categories/library.html">Library</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+        <i class="uil uil-search search-icon" id="searchIcon"></i>
+        <div class="search-box">
+          <i class="uil uil-search search-icon"></i>
+          <input type="text" placeholder="Nah bro! it's just a gimmic here ;)" />
+        </div>
+    </nav>
 
-    <h1>Settings page is under developnment, It will be live soon</h1><br>
-    <h1>Enjoy Growing</h1>
+    <h1 id="start">Settings page is under developnment, It will be live soon<br>
+    <a class="go-to-watch" href="watch.html">Go to ImproveTube Watch</a></h1>
 </body>
 </html>
